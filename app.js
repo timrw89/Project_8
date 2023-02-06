@@ -70,7 +70,7 @@ function displayModal(index) {
 
     const modalHTML = `
     <img class="avatar" src="${picture.large}" alt="picture1" />
-    <div class="text-container">
+    <div class="modal-text-container">
         <h2 class="name">${name.first} ${name.last}</h2>
         <p class="email">${email}</p>
         <p class="address">${city}</p>
@@ -99,6 +99,5 @@ gridContainer.addEventListener('click', e => {
 modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
 });
-
 
 

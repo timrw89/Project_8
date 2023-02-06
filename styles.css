@@ -5,7 +5,8 @@
 
 body {
     position: relative;
-    
+    z-index: 1;
+    box-sizing: border-box;
 }
 .overlay {
     position: absolute;
@@ -13,8 +14,11 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(100, 100, 100, 0,4);
-    background-color:rgb(177, 177, 177);
+    background-color:rgba(177, 177, 177, 0.8);
+    width: 99vw;
+    height: 48vw;
+    z-index: 100;
+    
 }
 
 header {
@@ -23,6 +27,7 @@ header {
     justify-content: space-between;
     padding-right: 25px;
     font-size: small;
+   
 }
 
 .searchbar{
@@ -40,6 +45,7 @@ input {
     grid-template-columns:2fr 2fr 2fr;
     column-gap: 2rem;
     row-gap: 2rem;
+    z-index: 1;
 }
 .card {
     width: 100%;
@@ -68,21 +74,35 @@ input {
     position: relative;
     text-align: center;
     background: #fff;
-    border: 2px solid rgb(10, 10, 231);
+    border: 2px solid rgb(68, 68, 104);
     border-radius: 5px;
     padding: 30px 20px;
+    z-index: 300;
 }
-
+.modal-content {
+    opacity: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    
+}
 .modal img {
     border-radius: 50%;
+    width: 150px;
+    margin-left: 30%;
+    
 }
 
 .modal-close {
     position: absolute;
-    right: 15px;
-    top: 5px;
+    right: 10px;
+    top: 10px;
     cursor: pointer;
 }
+.modal-text-container {
+    padding: 2%;
+}
+
 .hidden {
     display: none;
 }
