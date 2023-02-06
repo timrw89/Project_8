@@ -1,0 +1,100 @@
+* {
+    font-family: Lato;
+    
+}
+
+body {
+    position: relative;
+    
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(100, 100, 100, 0,4);
+    background-color:rgb(177, 177, 177);
+}
+
+header {
+    text-transform: uppercase;
+    display: flex;   
+    justify-content: space-between;
+    padding-right: 25px;
+    font-size: small;
+}
+
+.searchbar{
+    padding-top: 20px;
+}
+
+input {
+    height: 30px;
+}
+
+.grid-container {
+    display: grid;
+    width: 100%;
+    position: absolute;
+    grid-template-columns:2fr 2fr 2fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+.card {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 2.5%;
+    display: flex;
+    background-color: #fff;
+    opacity: 0;
+    animation: fadeIn 1s .2s ease forwards;
+}
+.card img {
+    border-radius: 50%;
+    padding: 3%;
+    width: 100px;
+}
+.text-container  {
+    padding-top: 7.5%;
+    font-weight: light;
+ }
+.text-container >* {
+   margin: 0;
+}
+.modal {
+    width: 375px;
+    margin: 15% auto auto;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    border: 2px solid rgb(10, 10, 231);
+    border-radius: 5px;
+    padding: 30px 20px;
+}
+
+.modal img {
+    border-radius: 50%;
+}
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
